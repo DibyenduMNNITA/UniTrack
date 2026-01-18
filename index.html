@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Project UniTrack</title>
+    <title>UniTrack Dashboard</title>
 </head>
+
 <body>
 
-    <h1>Hello World</h1>
-    <p>This is my index.html file.</p>
-    
+<!-- HEADER -->
+<div class="header">
+    <div class="left">UniTrack Dashboard</div>
+
+    <div class="right">
+        <div>Attendance: <b id="overallPercent">0%</b></div>
+
+        <!-- P A boxes -->
+        <div style="display:flex; gap:8px;">
+            <div id="pBox" class="box present">P</div>
+            <div id="aBox" class="box absent">A</div>
+        </div>
+
+        <button class="logout">Logout</button>
+    </div>
+</div>
+
+<!-- NAV BAR -->
+<div class="nav">
+    <button>Tasks</button>
+    <button>Timetable</button>
+    <button>Internships</button>
+</div>
+
+<!-- TASKS -->
+<div class="card">
+    <h3>Daily Tasks</h3>
+
+    <input id="taskInput" placeholder="Task name">
+    <input id="hourInput" type="number" placeholder="Hours">
+
+    <button>Add Task</button>
+
+    <button style="background:#16a34a;color:white;">
+        Submit Day
+    </button>
+
+    <ul id="taskList"></ul>
+
+    <h4>Weekly Study</h4>
+    <canvas id="weekChart" style="max-width:600px; margin:auto; display:block;"></canvas>
+
+</div>
+
 </body>
 </html>
