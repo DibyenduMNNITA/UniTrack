@@ -2,6 +2,119 @@
 <html>
 <head>
     <title>UniTrack Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background:#f3f6fb;
+}
+
+/* Top bar */
+.header{
+    background:#4f46e5;
+    color:white;
+    padding:12px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.left{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* Attendance boxes */
+.box{
+    width:32px;
+    height:32px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+    opacity:0.4;
+}
+
+.present{ background:#22c55e; }
+.absent{ background:#ef4444; }
+
+.active{
+    opacity:1;
+    box-shadow:0 0 5px rgba(0,0,0,0.4);
+}
+
+.logout{
+    background:#ef4444;
+    border:none;
+    color:white;
+    padding:6px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* Nav bar */
+.nav{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    background:white;
+    padding:10px;
+}
+
+.nav button{
+    background:#4f46e5;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* Main card */
+.card{
+    background:white;
+    margin:30px auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    width: 70%;
+    max-width: 900px;
+}
+
+
+input, button{
+    width: 95%;
+    max-width: 600px;
+    padding:10px;
+    margin:8px auto;
+    display:block;
+}
+
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:#eef2ff;
+    margin:5px 0;
+    padding:10px;
+    border-radius:5px;
+    display:flex;
+    justify-content:space-between;
+}
+</style>
 </head>
 
 <body>
@@ -49,6 +162,6 @@
     <canvas id="weekChart" style="max-width:600px; margin:auto; display:block;"></canvas>
 
 </div>
-
+      <script src="script.js"></script>
 </body>
 </html>
